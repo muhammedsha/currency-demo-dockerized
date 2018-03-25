@@ -7,7 +7,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="currency-conversion-service" />
-        <module name="currency-demo-udemy" />
         <module name="currency-exchange-service" />
         <module name="eureka-naming-server" />
         <module name="limits-service" />

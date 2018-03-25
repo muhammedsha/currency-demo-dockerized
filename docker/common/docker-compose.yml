@@ -1,0 +1,71 @@
+
+version: '2'
+services:
+  eurekaserver:
+   image:   notix/eurekaserver:n1
+   ports:
+       - "8761:8761"
+  configserver:
+    image: notix/configserver:n1
+    ports:
+       - "8888:8888"
+    environment:
+       EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+       EUREKASERVER_PORT: "8761"
+       ENCRYPT_KEY:       "IMSYMMETRIC"
+#  zuulserver:
+#    image: notix/zuulgateway:n1
+#    ports:
+#      - "8765:8765"
+#    environment:
+#      PROFILE: "default"
+#      SERVER_PORT: "8765"
+#      CONFIGSERVER_URI: "http://configserver:8888"
+#      EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+#      CONFIGSERVER_PORT:   "8888"
+
+  zuulserver:
+      image: notix/zuulgateway:n1
+      ports:
+        - "8765:8765"
+      environment:
+        PROFILE: "default"
+        SERVER_PORT: "8765"
+        CONFIGSERVER_URI: "http://configserver:8888"
+        EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+        EUREKASERVER_PORT:   "8761"
+        CONFIGSERVER_PORT:   "8888"
+        ENCRYPT_KEY:       "IMSYMMETRIC"
+
+#  zipkin:
+#      image: notix/zipkintracing:n1
+#      ports:
+#        - "9411:9411"
+#      environment:
+#        SERVER_PORT: "9411"
+  conversionservice:
+      image: notix/currencyconverter:n1
+      ports:
+        - "8100:8100"
+      environment:
+        PROFILE: "default"
+        SERVER_PORT: "8100"
+        CONFIGSERVER_URI: "http://configserver:8888"
+        EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+        EUREKASERVER_PORT:   "8761"
+        CONFIGSERVER_PORT:   "8888"
+        ZUULSERVER_PORT:     "8765"
+        ENCRYPT_KEY:       "IMSYMMETRIC"
+  exchangeservice:
+      image: notix/exchangeservice:n1
+      ports:
+        - "8000:8000"
+      environment:
+        PROFILE: "default"
+        SERVER_PORT: "8000"
+        CONFIGSERVER_URI: "http://configserver:8888"
+        EUREKASERVER_URI: "http://eurekaserver:8761/eureka/"
+        EUREKASERVER_PORT:   "8761"
+        CONFIGSERVER_PORT:   "8888"
+        ZUULSERVER_PORT:     "8765"
+        ENCRYPT_KEY:       "IMSYMMETRIC"

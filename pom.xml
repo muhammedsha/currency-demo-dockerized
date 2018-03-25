@@ -7,6 +7,7 @@
     <groupId>currency-demo-udemy</groupId>
     <artifactId>currency-demo-udemy</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
@@ -25,6 +26,27 @@
         <artifactId>spring-boot-starter</artifactId>
     </dependency>
     </dependencies>
+    <modules>
+        <module>currency-conversion-service</module>
+        <module>currency-exchange-service</module>
+        <module>spring-confserver</module>
+        <module>zuul-gateway</module>
+        <module>eureka-naming-server</module>
+        <module>zipkin-tracing</module>
+    </modules>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.4.10</version>
+                <configuration>
+                    <baseImage>java</baseImage>
+                    <imageName>example</imageName>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
