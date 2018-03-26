@@ -3,19 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/currency-conversion-service/currency-conversion-service.iml" filepath="$PROJECT_DIR$/currency-conversion-service/currency-conversion-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/currency-conversion-service/currency-conversion-service.iml" filepath="$PROJECT_DIR$/currency-conversion-service/currency-conversion-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/currency-demo-udemy.iml" filepath="$PROJECT_DIR$/currency-demo-udemy.iml" />
       <module fileurl="file://$PROJECT_DIR$/currency-exchange-service/currency-exchange-service.iml" filepath="$PROJECT_DIR$/currency-exchange-service/currency-exchange-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/currency-exchange-service/currency-exchange-service.iml" filepath="$PROJECT_DIR$/currency-exchange-service/currency-exchange-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/eureka-naming-server/eureka-naming-server.iml" filepath="$PROJECT_DIR$/eureka-naming-server/eureka-naming-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-naming-server/eureka-naming-server.iml" filepath="$PROJECT_DIR$/eureka-naming-server/eureka-naming-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/limits-service/limits-service.iml" filepath="$PROJECT_DIR$/limits-service/limits-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/limits-service/limits-service.iml" filepath="$PROJECT_DIR$/limits-service/limits-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/spring-confserver/spring-confserver.iml" filepath="$PROJECT_DIR$/spring-confserver/spring-confserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-confserver/spring-confserver.iml" filepath="$PROJECT_DIR$/spring-confserver/spring-confserver.iml" />
       <module fileurl="file://$PROJECT_DIR$/zipkin-tracing/zipkin-tracing.iml" filepath="$PROJECT_DIR$/zipkin-tracing/zipkin-tracing.iml" />
-      <module fileurl="file://$PROJECT_DIR$/zipkin-tracing/zipkin-tracing.iml" filepath="$PROJECT_DIR$/zipkin-tracing/zipkin-tracing.iml" />
-      <module fileurl="file://$PROJECT_DIR$/zuul-gateway/zuul-gateway.iml" filepath="$PROJECT_DIR$/zuul-gateway/zuul-gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/zuul-gateway/zuul-gateway.iml" filepath="$PROJECT_DIR$/zuul-gateway/zuul-gateway.iml" />
     </modules>
   </component>

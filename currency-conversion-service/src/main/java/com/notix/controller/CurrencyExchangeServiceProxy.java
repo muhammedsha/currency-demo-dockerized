@@ -9,12 +9,13 @@ import org.springframework.web.bind.annotation.PathVariable;
  * @author Vinu Sagar
  * 28/02/18
  */
+
 @FeignClient(name="zuul-gateway")
 @RibbonClient(name="currency-exchange-service")
 public interface CurrencyExchangeServiceProxy {
 
 
     @GetMapping("currency-exchange-service/currency-exchange/from/{from}/to/{to}")
-    public ConverterBean retrieveExchangeValue(@PathVariable("from") String from,
+     ConverterBean retrieveExchangeValue(@PathVariable("from") String from,
                                                @PathVariable("to") String to);
 }

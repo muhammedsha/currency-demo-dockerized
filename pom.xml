@@ -27,7 +27,7 @@
     </dependency>
     </dependencies>
     <modules>
-        <module>currency-conversion-service</module>
+         <module>currency-conversion-service</module>
         <module>currency-exchange-service</module>
         <module>spring-confserver</module>
         <module>zuul-gateway</module>
